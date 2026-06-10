@@ -97,12 +97,12 @@ const updateNote = async (req,res) =>{
             })
         }
         
-        note.title = title || note.title;
-        note.content = content || note.content;
+        if (title !== undefined) note.title = title;
+        if (content !== undefined) note.content = content;
 
-        const updateNote = await note.save();
+        const updatedNote = await note.save();
         
-        res.status(200).json(updateNote);
+        res.status(200).json(updatedNote);
     }
 
     catch(error){

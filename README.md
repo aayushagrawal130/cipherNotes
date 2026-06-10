@@ -1,195 +1,142 @@
 # CipherNotes
 
-<<<<<<< HEAD
-A secure full-stack note-taking application built using the MERN stack with JWT authentication, protected routes, and encrypted note architecture planning.
-
-## Live Demo
-[Live Link Here]
+A secure, minimalist note-taking application built with the MERN stack. Create, manage, and organize your thoughts with a clean, intuitive interface.
 
 ## Features
 
-- User Authentication (JWT)
-- Protected Routes
-- Create, Edit, Delete Notes
-- Persistent Login Sessions
-- Responsive Dashboard UI
-- Loading & Error States
-- REST API Architecture
-- MongoDB Database Integration
-- Secure Backend Middleware
-=======
-Secure full-stack note-taking application built using the MERN stack with JWT authentication and protected routes.
-
-## Features
-
-* User Authentication (JWT)
-* Protected Routes
-* Create Notes
-* View Notes
-* Delete Notes
-* Persistent Login Sessions
-* Responsive Dashboard UI
-* REST API Architecture
-* MongoDB Integration
-* Secure Backend Middleware
-
+- **User Authentication**: Secure registration and login using JWT
+- **Protected Routes**: Dashboard accessible only to authenticated users
+- **Create, Read, Update, Delete (CRUD) Notes**: Manage your notes with full control
+- **Search Functionality**: Find your notes instantly with the search bar
+- **Dark Mode Support**: Toggle between light and dark themes
+- **Responsive Design**: Beautiful UI that works on all devices
+- **Clean Interface**: Minimalist, modern design inspired by Notely
 
 ## Tech Stack
 
 ### Frontend
-<<<<<<< HEAD
-- React
-- React Router
+- React 19
+- React Router DOM
 - Tailwind CSS
 - Axios
 
 ### Backend
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
+- MongoDB / Mongoose
 - JWT Authentication
-- bcrypt.js
+- bcryptjs
 
 ---
-=======
-
-* React
-* React Router
-* Tailwind CSS
-* Axios
-
-### Backend
-
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* JWT Authentication
-* bcryptjs
-
 
 ## Folder Structure
 
-```txt
-<<<<<<< HEAD
-frontend/
-backend/
+```
+client/          # Frontend React client
+server/          # Backend Express server
 ```
 
 ---
 
-=======
-client/
-server/
-```
+## Installation & Setup
 
->>>>>>> 38339d514fa76b7da1e6acabd6b4b67e7994708a
-## Installation
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
+- MongoDB Atlas account (or local MongoDB)
 
-### Clone Repository
+### 1. Clone the Repository
 
 ```bash
-<<<<<<< HEAD
-git clone <repo-link>
-=======
 git clone https://github.com/aayushagrawal130/cipherNotes.git
->>>>>>> 38339d514fa76b7da1e6acabd6b4b67e7994708a
+cd cipherNotes
 ```
 
-### Backend Setup
+### 2. Configure Environment Variables
 
-```bash
-<<<<<<< HEAD
-cd backend
-=======
-cd server
-
-npm install
-npm run dev
-```
-
-### Frontend Setup
-
-```bash
-<<<<<<< HEAD
-cd frontend
-=======
-cd client
-
-npm install
-npm run dev
-```
-
-<<<<<<< HEAD
----
-
-## Environment Variables
-
-### Backend `.env`
-=======
-## Environment Variables
-
-### Server (.env)
-
+#### Backend (`server/.env`)
+Create a `.env` file in the `server` directory. Use `server/.env.example` as a template:
 
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_uri
-<<<<<<< HEAD
-JWT_SECRET=your_secret
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/database-name
+JWT_SECRET=your-secret-key-here
 ```
 
-### Frontend `.env`
+#### Frontend (`client/.env`)
+Create a `.env` file in the `client` directory. Use `client/.env.example` as a template:
 
 ```env
 VITE_API_URL=http://localhost:5000/api
 ```
 
----
+### 3. Install Dependencies
 
-## Screenshots
+```bash
+# Install root dependencies
+npm install
 
-(Add screenshots here later)
+# Install frontend dependencies
+npm install --prefix client
 
----
-
-## Future Improvements
-
-- End-to-End Note Encryption
-- Markdown Editor
-- Export Notes as PDF
-- Dark Mode
-- Search & Filters
-- Pinned Notes
-- Real-Time Sync
-
----
-
-## Author
-
-Aayush Agrawal
-
-- GitHub: https://github.com/aayushagrawal130
-- LinkedIn: https://www.linkedin.com/in/aayushagrawal130/
-=======
-JWT_SECRET=your_secret_key
+# Install backend dependencies
+npm install --prefix server
 ```
 
-## Future Improvements
+### 4. Run the Application
 
-* Edit Notes
-* Note Encryption
-* Search Notes
-* Dark Mode
-* Export Notes as PDF
-* Pinned Notes
+From the root directory:
+
+```bash
+# Run backend & frontend concurrently
+npm run dev
+```
+
+Or run them separately:
+
+```bash
+# Terminal 1: Start backend
+npm run server
+
+# Terminal 2: Start frontend
+npm run client
+```
+
+The application will launch on:
+- Frontend: `http://localhost:5173`
+- Backend API: `http://localhost:5000`
+
+---
+
+## API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login user
+
+### Notes
+- `GET /api/notes` - Get all notes for authenticated user
+- `POST /api/notes` - Create a new note
+- `PUT /api/notes/:id` - Update a note
+- `DELETE /api/notes/:id` - Delete a note
+
+---
+
+## Usage
+
+1. **Register** - Create a new account with your email and password
+2. **Login** - Sign in to access your dashboard
+3. **Create Notes** - Click "New Note" and enter your title and content
+4. **Edit Notes** - Hover over a note and click the edit icon
+5. **Delete Notes** - Hover over a note and click the delete icon
+6. **Search** - Use the search bar to find notes by title or content
+7. **Dark Mode** - Toggle dark mode using the button in the navbar
+
+---
 
 ## Author
 
-Aayush Agrawal
-
-GitHub:
-https://github.com/aayushagrawal130
-https://www.linkedin.com/in/aayushagrawal130/
+**Aayush Agrawal**
+- [GitHub](https://github.com/aayushagrawal130)
+- [LinkedIn](https://www.linkedin.com/in/aayushagrawal130/)
 

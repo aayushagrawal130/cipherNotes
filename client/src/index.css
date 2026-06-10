@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@layer utilities {
+  @keyframes bounce-short {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .animate-bounce-short {
+    animation: bounce-short 1.5s ease-in-out infinite;
+  }
+}
+
+/* Clean minimal design */
+html.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+html {
+  background-color: #fafafa;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
